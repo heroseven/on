@@ -26,7 +26,7 @@ Route::resource('users','UserController');
 
 Route::get('test',array(
     'as'=>'test',
-    'uses'=> 'UserController@create'
+    'uses'=> 'BaseController@create'
     )); 
 
 Route::get('users',array(
