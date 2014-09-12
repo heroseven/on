@@ -24,3 +24,12 @@ Route::get('tasks', function()
 
 Route::resource('users','UserController');
 
+Route::get('test',array(
+    'as'=>'test',
+    'uses'=> 'UserController@create'
+    )); 
+
+Route::get('users',array(
+    'as'=>'users',
+    'uses'=> 'UserController@create'
+    )); 
