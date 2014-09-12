@@ -15,7 +15,12 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
 Route::get('tasks', function()
 {
 	return "Hola Soy German";
 });
+
+
+Route::resource('users','UserController');
+
