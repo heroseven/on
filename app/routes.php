@@ -16,15 +16,43 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('tasks', function()
+// intefaz de asesor en orden
+
+Route::get('ingresar',function()
 {
-	return "Hola Soy German";
+	return View::make('layouts.ingresar');
 });
 
 
-Route::resource('users','UserController');
+Route::get('general',function()
+{
+	return View::make('asesor.general');
+});
 
-Route::get('test',array(
-    'as'=>'test',
-    'uses'=> 'HomeController@create'
-    )); 
+Route::get('room',function()
+{
+	return View::make('asesor.room');
+});
+
+Route::get('solicitudes',function()
+{
+	return View::make('asesor.solicitudes');
+});
+
+Route::get('estadisticas',function()
+{
+	return View::make('asesor.estadisticas');
+});
+
+Route::get('estadisticas',function()
+{
+	return View::make('asesor.estadisticas');
+});
+
+
+// interfaz del interesado
+
+Route::get('interesado',function()
+{
+	return View::make('layouts.interesado');
+});
