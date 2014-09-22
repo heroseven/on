@@ -8,9 +8,7 @@ class CreateForeignKeys extends Migration {
 	public function up()
 	{
 		Schema::table('agente', function(Blueprint $table) {
-			$table->foreign('id_empresa')->references('id')->on('empresa')
-						->onDelete('restrict')
-						->onUpdate('restrict');
+			$table->foreign('id_empresa')->references('id')->on('empresa');
 		});
 	}
 
